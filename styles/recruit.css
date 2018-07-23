@@ -15,7 +15,7 @@
 	width: 100%;
 	height: auto;
 	display: inline-block;
-	vertical-align: baseline
+	vertical-align: baseline;
 	position:absolute;
 	z-index: -1;
 }
@@ -75,7 +75,8 @@
 }
 #src-obj-bar .scr-circle img{
 	position:absolute;
-	left: 50%; top: 50%;
+	left: 50%;
+	top: 50%;
 }
 #src-obj-bar .scr-center{
 	position:absolute;
@@ -104,26 +105,36 @@
 	float:left;
 	text-align:center;
 	margin:30px auto;
-	height:100px;
+	margin-bottom: 15px;
+	height:80px;
 	position:relative;
+}
+#src-obj-bar  .recruiter-li:nth-of-type(odd){
+	padding-left: 15%;
+}
+#src-obj-bar  .recruiter-li:nth-of-type(even){
+	padding-right: 15%;
 }
 #src-obj-bar  .recruiter-li .recruiter-li-imgbar{
 	height:100%;
 }
 #src-obj-bar  .recruiter-li .recruiter-li-imgbar img{
-	height:100px;
+	height:80px;
 	animation:imgbar-img 10s infinite;
-	margin-top:-4px;
+	margin-top:8px;
 }
 #src-obj-bar .recruiter-li .icon{
-	font-size:90px;
+	font-size:60px;
 	z-index:2000;
 	position:absolute;
-	top:50%;
-	left:50%;
+	top:60%;
+	left:65%;
 	transform:translate(-50%,-50%);
 	cursor:pointer;
 	transition:all .3s;
+}
+.recruiter-list .recruiter-li .recruiter-li-imgbar .icon:nth-of-type(even){
+	color: black!important;
 }
 #src-obj-bar .recruiter-li .icon:hover{
 	font-size:70px;
