@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/default.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/resume.css">
+	<link rel="stylesheet" href="styles/yh.css">
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="modal-t/modal-t.css">
+	<link rel="stylesheet" href="modal-t/iconfont1.css">
+	<script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/welcome.js" type="text/javascript" charset="utf-8"></script>
+	<script src="modal-t/modal-t.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="header-hide"></div>
+	
+	<div id="header-container">
+		<div id="nav-bar">
+			<div class="l-nav">
+				<div class="l-nav-img"><img src="images/logo.png" alt="logo"></div>
+			</div>
+			<div class="r-nav">
+				<div class="nav-menu-content">
+					<ul class="nav-menu">
+						<li class="nav-header-item">
+							<div class="header-item-detail"><a href="index.html">首页</a><span class="fixed-bottom"></span></div>
+						</li>
+						<li class="nav-header-item">
+							<div class="header-item-detail"><a href="service.html">服务</a><span class="fixed-bottom"></span></div>
+						</li>
+						<li class="nav-header-item">
+							<div class="header-item-detail"><a href="javascript:void(0)">产品接口</a><span class="fixed-bottom"></span></div>
+							
+						</li>
+						<li class="nav-header-item">
+							<div class="header-item-detail"><a href="javascript:void(0)">项目</a><span class="fixed-bottom"></span></div>
+						</li>
+						<li class="nav-header-item">
+							<div class="header-item-detail"><a href="about.html">关于凡路</a><span class="fixed-bottom"></span></div>
+						</li>
+					</ul>
+					<div class="nav-login"><a class="login-f"><i class="login-i icon iconfont icon-modaologin"></i><span>登录</span></a></div>
+				</div>
+			</div>
+			<div class="bottom-nav">
+				<ul class="header-detail-list" item-index="2">
+					<li class="header-detail-item"><a href="javascript:void(0)">智慧城市接口</a></li>
+					<li class="header-detail-item"><a href="javascript:void(0)">乡村旅游接口</a></li>
+					<li class="header-detail-item"><a href="javascript:void(0)">学宝系统接口</a></li>
+					<li class="header-detail-item"><a href="javascript:void(0)">积分宝接口</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div id="resume-carousel-container">
+		<div id="resume-carousel-bar">
+			<canvas id="banner-container"></canvas>
+			<div id="resume-carousel-content">
+				<p>祝愿我们携手谱写真正的未来</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="progress-container">
+		<div id="progress-bar">
+			<div class="progress-header">
+				<span class="line"></span>
+				<h2>步骤</h2>
+			</div>
+			<div class="progress-body">
+				<div class="progress-panel-header">
+					<h4>Final团队招新（共5步）</h4>
+				</div>
+				<div class="progress-panel-body">
+					<div class="progress-panel-steps">
+						<ul class="steps-arr">
+							<li class="step active">
+								<a>部门介绍<span class="caret"></span></a>
+							</li>
+							<li class="step active">
+								<a>制度规范<span class="caret"></span></a>
+							</li>
+							<li class="step active">
+								<a>身份验证<span class="caret"></span></a>
+							</li>
+							<li class="step active">
+								<a>个人简历<span class="caret"></span></a>
+							</li>
+							<li class="step">
+								<a>提交申请<span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="progress-panel-progress">
+						<div class="progress-cb" style="width:80%"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form class="resume-form" method="post" action="">
+	<div id="person-container">
+		<div id="person-bar">
+			<div class="person-header">
+				<span class="line"></span>
+				<h2>个人简历</h2>
+			</div>
+			<div class="person-body">
+				<div class="panel-warning">请认真填写个人简历的每个项目，我们将对你提交的信息严格保密。</div>
+				<div class="panel-info">
+					<div class="panel-info-item">
+						<h2 class="panel-info-head">个人基本信息</h2>
+						<div class="panel-info-body">
+							<div class="form-con">
+								<span class="panel-info-body-label">姓名</span>
+								<input type="text" value="xxx" required readonly name="student_name">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">性别</span>
+								<input type="text" value="1" required disabled name="student_sex_show">
+								<input type="hidden" value="1" required readonly name="student_sex">
+							</div>
+						</div>
+					</div>
+					<div class="panel-info-item">
+						<h2 class="panel-info-head">学院信息</h2>
+						<div class="panel-info-body">
+							<div class="form-con">
+								<span class="panel-info-body-label">学号</span>
+								<input type="text" value="201450080224" required readonly name="student_id">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">学院</span>
+								<input type="text" value="0" required disabled name="student_college_show">
+								<input type="hidden" value="0" required readonly name="student_college">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">入学年份</span>
+								<input type="text" value="2014" required readonly name="student_grade">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">专业</span>
+								<input type="text" value="计算机科学与技术"required readonly name="student_major" >
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">班级</span>
+								<input type="text" value="计通卓越"required readonly name="student_class_name" >
+							</div>
+						</div>
+					</div>
+					<div class="panel-info-item">
+						<h2 class="panel-info-head">联系方式</h2>
+						<div class="panel-info-body">
+							<div class="form-con">
+								<span class="panel-info-body-label">手机号码</span>
+								<input type="text"  name="student_phone">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">QQ</span>
+								<input type="text" name="student_qq">
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">E-mail</span>
+								<input type="text" name="student_email">
+							</div>
+						</div>
+					</div>
+					<div class="panel-info-item">
+						<h2 class="panel-info-head">个人简介</h2>
+						<div class="panel-info-body">
+							<div class="form-con">
+								<span class="panel-info-body-label">申请加入的部门</span>
+								<input type="text" value="JAVA部" disabled required/>
+								<input type="hidden" value="3" readonly required name="depart_id"/>
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">自我介绍（性格、爱好、专业技能或作品简介）</span>
+								<textarea rows="10" name="student_self"></textarea>
+							</div>
+							<div class="form-con">
+								<span class="panel-info-body-label">加入凡路实验室的目的或原因：</span>
+								<textarea name="student_cause"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<button class="panel-btn" type="submit"><i class="icon iconfont icon-tijiao"></i>提交申请</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</form>
+	
+	<div id="footer-filter-container">
+		<div id="footer-filter-bar">
+			<div class="footer-filter-header">
+				<ul class="footer-filter-header-list">
+					<li class="fofilter-header-list-item"><i class="icon iconfont icon-gaoxiaofuwu"></i>高效率</li>
+					<li class="fofilter-header-list-item"><i class="icon iconfont icon-qianyan"></i>最前沿</li>
+					<li class="fofilter-header-list-item"><i class="icon iconfont icon-quanmian"></i>全方面</li>
+					<li class="fofilter-header-list-item"><i class="icon iconfont icon-fuwu"></i>高服务</li>
+					<li class="fofilter-header-list-item"><i class="icon iconfont icon-jiage"></i>低价格</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer-container">
+		<div id="footer-bar">
+			<div class="footer-up">
+				<div class="footer-up-l"><img src="images/logo.png" alt="logo"></div>
+				<div class="footer-up-r">
+					<a href="javascript:void(0)">友情链接：</a>
+					<a href="javascript:void(0)">长沙理工大学</a>
+					<a href="javascript:void(0)">长沙理工大学计通学院</a>
+					<a href="javascript:void(0)">大学生科技交流平台</a>
+					<a href="javascript:void(0)">长沙理工大学创业园</a>
+				</div>
+			</div>
+			<div class="footer-bot">
+				<div class="footer-bot-l">
+					<img src="images/link1.jpg" alt="link1"><img src="images/link2.jpg" alt="link2">
+				</div>
+				<div class="footer-bot-r">
+					<p>Copyright©2016 凡路团队 版权所有 </p>
+					<p>地址：湖南省长沙市雨花区万家丽南路2段960号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(".resume-form").submit(function(){
+		var flag = false;
+		if($("input[name=student_phone]").val() == ""){
+			setResponseImg('电话号码不能为空', 'error', 1000);
+			flag = true;
+		}
+		else if($("input[name=student_qq]").val() == ""){
+			setResponseImg('QQ不能为空', 'error', 1000);
+			flag = true;
+		}
+		else if($("input[name=student_email]").val() == ""){
+			setResponseImg('E-mail不能为空', 'error', 1000);
+			flag = true;
+		}
+		else if($("textarea[name=student_self]").val() == ""){
+			setResponseImg('自我介绍不能为空', 'error', 1000);
+			flag = true;
+		}
+		else if($("textarea[name=student_cause]").val() == ""){
+			setResponseImg('原因不能为空', 'error', 1000);
+			flag = true;
+		}
+		if(flag) {
+			event.preventDefault();
+			return false;
+		}
+		else return true;
+	});
+		
+	</script>
+	</body>
+</html>
