@@ -115,6 +115,10 @@
 #src-obj-bar  .recruiter-li:nth-of-type(even){
 	padding-right: 15%;
 }
+#src-obj-bar  .recruiter-li:last-child{
+    padding-top: 20px;
+    left: 17.5%;
+}
 #src-obj-bar  .recruiter-li .recruiter-li-imgbar{
 	height:100%;
 }
@@ -133,14 +137,32 @@
 	cursor:pointer;
 	transition:all .3s;
 }
-.recruiter-list .recruiter-li .recruiter-li-imgbar .icon:nth-of-type(even){
-	color: black;
+#src-obj-bar .recruiter-li:nth-of-type(even) .icon{
+	left: 35%;
 }
-.recruiter-list .recruiter-li .recruiter-li-imgbar .icon:nth-of-type(even){
-	color: black;
+#src-obj-bar  .recruiter-li:last-child .icon{
+    padding-top: 46px;
 }
 #src-obj-bar .recruiter-li .icon:hover{
 	font-size:70px;
+}
+.join-us-button{
+    position: absolute;
+    top: 580px;
+    right: 5%;
+    color: #00c1de;
+    background-color: transparent;
+    border: 2px solid #00c1de;
+    width: 90px;
+    height: 40px;
+    z-index: 999;
+    cursor: pointer !important;
+}
+.join-us-button:hover{
+    background-color: #00c1de;
+    color: #eeeeee;
+    /*border: 2px solid #ffffff;*/
+    border: 2px solid #00c1de;
 }
 
 @keyframes imgbar-img
@@ -273,7 +295,7 @@
 	transition:all .3s;
 }
 
-#src-obj-bar .recruiter-part-li .recruiter-part-li-btn > a{
+#src-obj-bar .recruiter-part-li .recruiter-part-li-btn > a . {
 	display: block;
 	height:100%;
 	width:100%;
