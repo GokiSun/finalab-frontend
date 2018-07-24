@@ -67,3 +67,27 @@ $(function() {
 
 	});
 });
+
+
+window.onload = function () {
+	alert(123)
+    var list = document.getElementsByClassName('numberout-list')[0]//这个list指的是选取的整个ul，通过getElementsByClassName(拿到的是一个数组，长度为1
+    var prev = document.getElementById('prev');//是呀没毛病呀对呀  ？？？ 为啥是一个长度为1的数组，不应该死一个对象？不是对象，你重新建一个html，我演示一下
+    var next = document.getElementById('next');//等等你删我注释干嘛
+    next.onclick = function () {
+    	if(parseInt(list.style.left)!= -250)
+		{
+            list.style.left = parseInt(list.style.left) - 250 + 'px'
+            console.log(list.style.left)
+		}
+
+    }
+    prev.onclick = function () {
+        if(parseInt(list.style.left)!= 0)
+		{
+            list.style.left = parseInt(list.style.left) + 250 + 'px'
+            console.log(list.style.left)
+		}
+
+    }
+}

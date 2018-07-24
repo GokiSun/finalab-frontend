@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="styles/default.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="fonts/iconfont.css">
-	<script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<div id="header-hide"></div>
@@ -28,7 +26,7 @@
 						</li>
 						<li class="nav-header-item">
 							<div class="header-item-detail"><a href="javascript:void(0)">产品接口</a><span class="fixed-bottom"></span></div>
-							
+
 						</li>
 						<li class="nav-header-item">
 							<div class="header-item-detail"><a href="javascript:void(0)">项目</a><span class="fixed-bottom"></span></div>
@@ -515,25 +513,95 @@
 			</div>
 			<div class="numberout-bg"></div>
 			<div class="numberout-bg-over"></div>
-			<ul class="numberout-list">
-				<li class="numberout-list-item">
-					<div class="nu-list-item-content">
-						<div class="nu-item-content-head">
-							<img src="images/tmq.png" alt="number">
+			<div id = "numberout-list-container">
+				<ul class="numberout-list" style="left: 0px;"><!--numberout-list只有一个呀用class拿到的是一个数组-->
+					<li class="numberout-list-item">
+						<div class="nu-list-item-content">
+							<div class="nu-item-content-head">
+								<img src="images/tmq.png" alt="number">
+							</div>
+							<div class="nu-item-content-body">
+								<h2>xxx1</h2>
+								<p class="nu-item-content-com">
+									阿里巴巴集团
+								</p>
+								<p class="nu-item-content-desc">
+									只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
+								</p>
+							</div>
 						</div>
-						<div class="nu-item-content-body">
-							<h2>xxx</h2>
-							<p class="nu-item-content-com">
-								阿里巴巴集团
-							</p>
-							<p class="nu-item-content-desc">
-								只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
-							</p>
+					</li><!--这里的是list-item？为啥no reason它就是这样子的-->
+					<li class="numberout-list-item">
+						<div class="nu-list-item-content">
+							<div class="nu-item-content-head">
+								<img src="images/tmq.png" alt="number">
+							</div>
+							<div class="nu-item-content-body">
+								<h2>xxx2</h2>
+								<p class="nu-item-content-com">
+									阿里巴巴集团
+								</p>
+								<p class="nu-item-content-desc">
+									只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
+								</p>
+							</div>
 						</div>
-					</div>
-				</li>
-			</ul>
+					</li><!--但是这里的li的class是numberout-list-item呀不是numberout//不是应该让ul整体平移吗-->
+					<li class="numberout-list-item">
+						<div class="nu-list-item-content">
+							<div class="nu-item-content-head">
+								<img src="images/tmq.png" alt="number">
+							</div>
+							<div class="nu-item-content-body">
+								<h2>xxx3</h2>
+								<p class="nu-item-content-com">
+									阿里巴巴集团
+								</p>
+								<p class="nu-item-content-desc">
+									只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
+								</p>
+							</div>
+						</div>
+					</li><!--是呀，那直接控制numberout-list就好了呀是呀//所以用这个-->
+					<li class="numberout-list-item">
+						<div class="nu-list-item-content">
+							<div class="nu-item-content-head">
+								<img src="images/tmq.png" alt="number">
+							</div>
+							<div class="nu-item-content-body">
+								<h2>xxx4</h2>
+								<p class="nu-item-content-com">
+									阿里巴巴集团
+								</p>
+								<p class="nu-item-content-desc">
+									只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="numberout-list-item">
+						<div class="nu-list-item-content">
+							<div class="nu-item-content-head">
+								<img src="images/tmq.png" alt="number">
+							</div>
+							<div class="nu-item-content-body">
+								<h2>xxx5</h2>
+								<p class="nu-item-content-com">
+									阿里巴巴集团
+								</p>
+								<p class="nu-item-content-desc">
+									只有你学会把自己已有的成绩都归零，才能腾出空间去接纳更多的新东西，如此才能使自己不断的超越自己。
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
 		</div>
+		<a href="javascript:;" class="arrow" id = "prev">&lt;</a>
+		<a href = "javascript:;" class="arrow" id = "next">&gt;</a>
 	</div>
 
 	<div id="project-container">
@@ -544,6 +612,18 @@
 			</div>
 			<div class="project-body">
 				<ul class="project-body-list">
+					<li class="project-body-list-item">
+						<div class="pro-list-item-img"><img src="images/project1.jpg" alt="project"></div>
+						<div class="pro-list-item-bot">
+							<p>中国神奇先生1<a href="xxx"> <button class="pro-btn">了解更多</button></a></p>
+						</div>
+					</li>
+					<li class="project-body-list-item">
+						<div class="pro-list-item-img"><img src="images/project1.jpg" alt="project"></div>
+						<div class="pro-list-item-bot">
+							<p>中国神奇先生1<a href="xxx"> <button class="pro-btn">了解更多</button></a></p>
+						</div>
+					</li>
 					<li class="project-body-list-item">
 						<div class="pro-list-item-img"><img src="images/project1.jpg" alt="project"></div>
 						<div class="pro-list-item-bot">
@@ -592,5 +672,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
