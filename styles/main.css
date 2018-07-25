@@ -10,6 +10,7 @@ body{
 #header-container, #header-container #nav-bar{
 	width:100%;
 }
+
 #nav-bar{
 	top:0;
 	position: absolute;
