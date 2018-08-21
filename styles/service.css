@@ -375,7 +375,7 @@
     float: left;
     overflow: hidden;
     border: 1px solid #d7d8d9;
-    background: url(../images/service-list1.jpg);
+    /*background: url(../images/service-list1.jpg);*/
 	background-size: contain;
     cursor: pointer;
     overflow: hidden;
