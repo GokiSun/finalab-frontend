@@ -467,7 +467,7 @@
     color: #fff;
 }
 #award-bar .award-ul .award-li .award-imglist img{
-	width:30%;
+	height: 150px;
 }
 #award-bar .award-ul .award-li .award-desc{
 	display: none;
