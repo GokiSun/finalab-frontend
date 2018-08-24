@@ -316,7 +316,7 @@
     overflow: hidden;
     padding: 21px 35px 28px;
 }
-    
+
 .whychoose-li .inner > p{
 	width: 100%;
     height: 48px;
@@ -368,23 +368,43 @@
 }
 
 #customer-bar .customer-ul > li{
+	position: relative;
 	width: 313px;
     height: 122px;
     margin: 10px 10px;
     float: left;
     overflow: hidden;
     border: 1px solid #d7d8d9;
-    background: #fff;
+    /*background: url(../images/service-list1.jpg);*/
+	background-size: contain;
     cursor: pointer;
+    overflow: hidden;
+    color: #fff;
 }
+#customer-bar .customer-ul > li::before{
+	white-space: pre;
+	content: "\A项目名称：\A\A项目简介：";
+	width: 125.5px;
+	left: -100%;
+	text-align: right;
+}
+#customer-bar .customer-ul > li > .desc{
+	width: 185.5px;
+	right: -100%;
+}
+#customer-bar .customer-ul > li::before,
+#customer-bar .customer-ul > li > .desc{
+	position: absolute;
+	top: 0;
+	font-weight: bold;
+	color: #fff;
+	height: 122px;
+	background: rgba(0,0,0,.4);
+	transition: all .4s;
+}
+#customer-bar .customer-ul > li:hover::before{left: 0;}
+#customer-bar .customer-ul > li:hover > .desc{right: 0;}
 
-#customer-bar .customer-ul > li:hover{
-	background: #fafafa;
-}
-
-#customer-bar .customer-ul > li img{
-	width:100%;
-}
 #orservice-bar .orservice-ul{
 	margin-bottom:30px;
 }
@@ -423,7 +443,7 @@
 	font-size:40px;
 }
 #orservice-bar .orservice-ul-header h2{
-	
+
 }
 #orservice-bar .orservice-ul > li:hover{
     background-color: #1b1a22;

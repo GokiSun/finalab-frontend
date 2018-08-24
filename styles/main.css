@@ -74,7 +74,7 @@ body{
 }
 .nav-login{
 	margin-left:40px;
-	
+
 }
 .nav-login .login-f:hover{
 	background: #28d0e9;
@@ -108,7 +108,7 @@ body{
     right:0;
     background-color: #00c1de;
     bottom: -1px;
-    transition: all .3s 
+    transition: all .3s
 }
 .header-item-detail:hover{
 	background: rgba(0,0,0,.3);
@@ -538,7 +538,7 @@ body{
     color: #666;
     line-height: 1.5;
 }
-    
+
 .fc-fc-list-item-active p button{
 	display: inline-block;
     outline: none;
@@ -844,7 +844,7 @@ body{
 	box-shadow:0 0 10px 3px rgba(0,0,0,.5);
 }
 .numberout-list li:hover .nu-list-item-content .nu-item-content-head img{
-	
+
 }
 
 .numberout-list li:hover .nu-list-item-content .nu-item-content-head img {
@@ -972,7 +972,14 @@ body{
     overflow: hidden;
     height: 150px;
 }
-
+.pro-list-item-img{
+	position: relative;
+}
+.pro-list-item-img label{
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
 .project-body-list .pro-list-item-img img{
 	width:100%;
 	transition:all .3s;
@@ -985,7 +992,7 @@ body{
     width:100%;
     box-sizing: border-box;
 }
-    
+
 .project-body-list .pro-list-item-bot .pro-btn{
 	display: inline-block;
     outline: none;
@@ -999,6 +1006,8 @@ body{
     color: #28d0e9;
     transition: all .3s;
     float:right;
+	padding: 0;
+	line-height: 1;
 }
 
 .project-body-list .pro-list-item-bot .pro-btn:hover{
