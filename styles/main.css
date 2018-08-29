@@ -10,7 +10,6 @@ body{
 #header-container, #header-container #nav-bar{
 	width:100%;
 }
-
 #nav-bar{
 	top:0;
 	position: absolute;
@@ -135,8 +134,6 @@ body{
 	background: rgba(0,0,0,.2);
 }
 
-
-
 #carousel-container{
 	width: 100%;
 	height:665px;
@@ -148,15 +145,25 @@ body{
 	position: relative;
 	width: 100%;
 }
+#carousel-bar::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.6);
+}
 #carousel-bar img{
 	width:100%;
 }
 #carousel-content{
+	z-index: 111;
 	position: absolute;
 	left:50%;
 	transform:translateX(-50%);
 	margin:auto;
-	top:250px;
+	top:200px;
 	width:1000px;
 	color:#fff;
 	line-height: 50px;
@@ -771,13 +778,13 @@ body{
 }
 
 .arrow{
-	padding-top: 6px;
+	padding-top: 0;
 	border-radius: 50%;
 	color: rgb(31,31,31);
 	text-decoration: none;
 	display: none;
 	cursor:pointer;
-	line-height:39px;
+	line-height:60px;
 	text-align: center;
 	font-size: 60px;
 	font-weight: bold;
@@ -805,7 +812,7 @@ body{
 	position: absolute;
 }
 .numberout-list{
-	width:1250px;
+	width:2250px;
 	position: absolute;
 	z-index: 1;
 	margin-top:90px;
@@ -1006,10 +1013,11 @@ body{
     color: #28d0e9;
     transition: all .3s;
     float:right;
-	padding: 0;
-	line-height: 1;
-}
 
+}
+button{	padding: 0;
+	line-height: 1;}
+.btn-lg{line-height: .1;}
 .project-body-list .pro-list-item-bot .pro-btn:hover{
 	background: #28d0e9;
 	border:1px solid #28d0e9;
@@ -1019,7 +1027,7 @@ body{
 #footer-container{
 	background: #2e3033;
 }
-
+.wrap-list-item h2{line-height: 3.6;}
 #footer-bar{
 	width:1000px;
 	margin:0 auto;
@@ -1099,7 +1107,7 @@ body{
 }
 .footer-filter-header-list .fofilter-header-list-item{
 	float:left;
-	width:20%;
+	width:25%;
 	padding:10px 20px;
 	text-align: center;
 	vertical-align: middle;
@@ -1138,9 +1146,9 @@ body{
 }
 #carousel-container #wrap-bar .wrap-list li{
 	float:left;
-	padding:28px 0 28px;
+	padding:0;
 	height:100px;
-	width:20%;
+	width:25%;
 	box-sizing:border-box;
 	border-left: 1px solid #727577;
     border-color: hsla(0,0%,100%,.1);
@@ -1184,3 +1192,29 @@ body{
 	color:#fff;
 	font-weight: 400;
 }
+.video-container{
+	z-index: 9999;
+	position: fixed;
+	text-align: center;
+	padding-top: 4%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+.video-close{
+	user-select: none;
+	font-size: 40px;
+	cursor: pointer;
+	color: #fff;
+	position: absolute;
+	top: 30px;
+	right: 230px;
+}
+.btnstart{
+	width: 80px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+

@@ -24,10 +24,10 @@ $('#footer-bar').html('<div class="footer-up">\n' +
     '\t\t\t\t<div class="footer-up-l"><img src="images/logo.png" alt="logo"></div>\n' +
     '\t\t\t\t<div class="footer-up-r">\n' +
     '\t\t\t\t\t<a href="javascript:void(0)">友情链接：</a>\n' +
-    '\t\t\t\t\t<a href="javascript:void(0)">长沙理工大学</a>\n' +
-    '\t\t\t\t\t<a href="javascript:void(0)">长沙理工大学计通学院</a>\n' +
-    '\t\t\t\t\t<a href="javascript:void(0)">大学生科技交流平台</a>\n' +
-    '\t\t\t\t\t<a href="javascript:void(0)">长沙理工大学创业园</a>\n' +
+    '\t\t\t\t\t<a href="http://www.csust.edu.cn/">长沙理工大学</a>\n' +
+    '\t\t\t\t\t<a href="http://www.csust.edu.cn/jtxy/index.htm">长沙理工大学计通学院</a>\n' +
+    '\t\t\t\t\t<a href="http://www.csust.edu.cn/kxyjb/index.htm">大学生科技交流平台</a>\n' +
+    '\t\t\t\t\t<a href="http://www.csust.edu.cn/cxcyjyxy/index.htm">长沙理工大学创业园</a>\n' +
     '\t\t\t\t</div>\n' +
     '\t\t\t</div>\n' +
     '\t\t\t<div class="footer-bot">\n' +

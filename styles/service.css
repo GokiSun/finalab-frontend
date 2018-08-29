@@ -6,6 +6,7 @@
 	position: relative;
 }
 #service-carousel-bar{
+	background: rgb(22,161,133);
 	overflow: hidden;
 	position: relative;
 	width: 100%;
@@ -214,15 +215,18 @@
 }
 
 #whychoose-container{
-	background: #f7f7f7;
-}
-#process-container, #customer-container{
 	background: #fff;
+}
+#process-container{
+	background: rgb(242,242,242);
+}
+#customer-container{
+	position: relative;
+	background: #262b2e;
 }
 #orservice-container{
 	background: #edf7ff
 }
-
 
 #whychoose-container #whychoose-bar,
 #customer-container #customer-bar,#orservice-container #orservice-bar{
@@ -359,6 +363,7 @@
 #process-bar .process-body img{
 	width:100%;
 }
+.process-body{padding: 0 50px;}
 #customer-bar .customer-ul:after{
 	clear:both;
 	content:'';
@@ -558,4 +563,18 @@
 #orservice-bar .orservice-ftli.no-up .text p{
 	background-color: #e32f33;
     border: 1px solid #e32f33;
+}
+
+#site-landing {
+	position: absolute;
+	top: 0;
+	height: 1086px;
+	width: 100%;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.bg{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -975px;
 }

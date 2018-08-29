@@ -1,4 +1,8 @@
 $(function(){
+    $("#service-carousel-bar").particleground({
+        dotColor: '#5cbdaa',
+        lineColor: '#5cbdaa'
+    });
 	var wrap = $("#wrap-container"),
 		wrapHeight = wrap.height(),
 		car = $("#service-carousel-container"),

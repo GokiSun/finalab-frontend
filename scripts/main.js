@@ -1,7 +1,14 @@
 $(function() {
 
-	var flag = false;
+    //banner
+	var rand = Math.random();
+    if(rand <= .5){
+        $('#carousel-bar').append('<img src="images/banner.jpg" alt="banner">');
+	} else{
+        $('#carousel-bar').append('<img src="images/service-banner.png" alt="banner">');
+	}
 
+	var flag = false;
 	function hover() {
 		if (flag) return false;
 		flag = true;
@@ -15,7 +22,7 @@ $(function() {
 		}, "100ms", function() {
 			flag = false;
 		});
-		
+
 		$(this).siblings().removeClass('fc-fc-list-item-active').addClass('fc-fc-list-item');
 		$(this).removeClass('fc-fc-list-item').addClass('fc-fc-list-item-active');
 	}
@@ -48,11 +55,11 @@ $(function() {
 		var scrollTop = $(window).scrollTop() ;
 		if(scrollTop > cwarpH){
 			wrap.addClass('wrap-fixed').removeClass('wrap-absolute');
-			console.log("fixed");
+			// console.log("fixed");
 		}
 		else{
 			wrap.addClass('wrap-absolute').removeClass('wrap-fixed');
-			console.log("absolute");
+			// console.log("absolute");
 		}
 
 		var qid = -1;
@@ -66,27 +73,19 @@ $(function() {
 		else wrapList.removeClass('active');
 
 	});
+	//video
+    $('.video-container').hide();
+    $('.btnstart').on("click",function(){
+        $('.video-container').show();
+        $('.video-container').html('<video class="video-content" width="1000" height="580" controls>\n' +
+            '<source src="http://47.106.101.133/finalab-data/video/final.mp4" type="video/mp4">\n' +
+            '您的浏览器不支持 video 标签。\n' +
+            '</video>\n' +
+            '<span class="video-close">X</span>');
+    });
+	$('.video-container').on("click",".video-close",function(){
+        $('.video-container').html('');
+        $('.video-container').hide();
+	})
 });
 
-
-window.onload = function () {
-    var list = document.getElementsByClassName('numberout-list')[0]//这个list指的是选取的整个ul，通过getElementsByClassName(拿到的是一个数组，长度为1
-    var prev = document.getElementById('prev');//是呀没毛病呀对呀  ？？？ 为啥是一个长度为1的数组，不应该死一个对象？不是对象，你重新建一个html，我演示一下
-    var next = document.getElementById('next');//等等你删我注释干嘛
-    next.onclick = function () {
-    	if(parseInt(list.style.left)!= -250)
-		{
-            list.style.left = parseInt(list.style.left) - 250 + 'px'
-            console.log(list.style.left)
-		}
-
-    }
-    prev.onclick = function () {
-        if(parseInt(list.style.left)!= 0)
-		{
-            list.style.left = parseInt(list.style.left) + 250 + 'px'
-            console.log(list.style.left)
-		}
-
-    }
-}
