@@ -1,3 +1,8 @@
+var modelbody = document.getElementById('modelbody');
+var carouselinner = document.getElementById('carousel-inner');
+function showimage(source) {
+    modelbody.innerHTML='<img width="100%" src="'+source+'" >';
+};
 $(function(){
 	var wrap = $("#wrap-container"),
 		wrapHeight = wrap.height(),
@@ -41,18 +46,9 @@ $(function(){
 
 	});
 
-	// $(".award-li").hover(function(){
-	// 	$(this).addClass('active').siblings().removeClass('active');
-	// }, function(){
-	// });
-	$("#about-carousel-bar").particleground({
-		dotColor: '#5cbdaa',
-    	lineColor: '#5cbdaa'
-	});
-
 	//the leaders
     $.ajax({
-        url:"http://result.eolinker.com/YcKnnr238f77d4669fdcfb9d50b1116bb07ef1a248d263e?uri=/sys/member/getCouncil",
+        url:"http://47.106.101.133:12580/sys/member/getCouncil",
         type: "POST",
         dataType: "JSON",
         success: function (res) {
@@ -72,37 +68,66 @@ $(function(){
     })
 	//the win
     $.ajax({
-        url:"http://result.eolinker.com/YcKnnr238f77d4669fdcfb9d50b1116bb07ef1a248d263e?uri=/sys/winning/getAll",
+        url:"http://47.106.101.133:12580/sys/winning/getAll",
         type: "POST",
         dataType: "JSON",
+        async: false,
         success: function (res) {
             let result = res.data;
-            let idx = Math.ceil(Math.random()*result.length);
             if (res) {
                 $('.award-ul').html("");
-                for (let i = 0;i < 6; i++){
-                    if(idx>=result.length) idx = 0;
+                for (let i = 0;i < result.length; i++){
                     $('.award-ul').append('<li class="award-li">\n' +
-                        '<h4><img src="'+result[idx].awardImage+'" alt="">'+result[idx].name+'</h4>\n' +
-                        '<p class="award-award">'+result[idx].awardName+'</p>\n' +
+                        '<h4><img src="'+result[i].awardImage+'" alt="">'+result[i].name+'</h4>\n' +
+                        '<p class="award-award">'+result[i].awardName+'</p>\n' +
                         '<div class="award-imglist">\n' +
                         '<h4>奖项照</h4>\n' +
-                        '<img src="'+result[idx].awardImage+'" alt="">\n' +
-                        '</div>\n' +
-                        '<div class="award-time">\n' +
-                        ''+result[idx].time.substring(0,10)+'\n' +
-                        '</div>\n' +
+                        '<img data-toggle="modal" data-target="#myModal" ' +
+                        ' src="'+result[i].awardImage+'" onclick="showimage(\''+result[i].awardImage+'\')" />\n' +
+                        '</div>\n'+
+                        '<div class="award-time">'+result[i].time.substring(0,10)+'</div>\n' +
                         '<div class="award-desc">\n' +
-                        ''+result[idx].profile+'' +
+                        ''+result[i].profile+'' +
                         '</div>\n' +
                         '</li>');
-                    idx++;
                 }
                 $(".award-li").hover(function(){
                     $(this).addClass('active').siblings().removeClass('active');
                 }, function(){
                 });
             }
+        },
+        complete: function () {
+            var list = document.getElementsByClassName('award-ul')[0]//这个list指的是选取的整个ul，通过getElementsByClassName(拿到的是一个数组，长度为1
+            list.style.left = '0px';
+            var listlength = list.getElementsByClassName('award-li').length;
+            list.style.width = listlength * 320 + 'px';
+            var prev = document.getElementById('prev');//是呀没毛病呀对呀  ？？？ 为啥是一个长度为1的数组，不应该死一个对象？不是对象，你重新建一个html，我演示一下
+            var next = document.getElementById('next');//等等你删我注释干嘛
+            var a;
+            next.onmouseover = function () {
+                a = setInterval(function () {
+                    if(parseInt(list.style.left) > -(listlength - 8) * 370)
+                    {
+                        console.log(parseInt(list.style.left));
+                        list.style.left = parseInt(list.style.left) - 1 + 'px';
+                    }
+                },5);
+            };
+            next.onmouseleave = function () {
+                clearInterval(a);
+            };
+            prev.onmouseover = function () {
+                a = setInterval(function () {
+                    if(parseInt(list.style.left) < 0)
+                    {
+                        list.style.left = parseInt(list.style.left) + 1 + 'px';
+                    }
+                },5);
+            };
+            prev.onmouseleave = function () {
+                clearInterval(a);
+            };
         }
     })
 });

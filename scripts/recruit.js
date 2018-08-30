@@ -131,7 +131,7 @@ $(function() {
 
 
   var iconli = $(".recruiter-li .icon");
-  iconli.click(function() {
+  iconli.click(function(event) {
     event.stopPropagation();
     event.preventDefault();
     var indx = $(this).parent().parent().index();
