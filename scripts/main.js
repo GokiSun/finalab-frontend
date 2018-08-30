@@ -13,11 +13,11 @@ $(function() {
 		if (flag) return false;
 		flag = true;
 		$(this).siblings().animate({
-			width: "15%",
+			width: "13%",
 			height: "400px"
 		}, "100ms");
 		$(this).animate({
-			width: "40%",
+			width: "35%",
 			height: "470px"
 		}, "100ms", function() {
 			flag = false;
