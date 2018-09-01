@@ -801,6 +801,7 @@ body{
 #numberout-container:hover .arrow{
 	display: block;
 }
+
 #prev{
 	left: 120px;
 	top: 380px;
@@ -850,9 +851,6 @@ body{
 	border-radius: 50%;
 	box-shadow:0 0 10px 3px rgba(0,0,0,.5);
 }
-.numberout-list li:hover .nu-list-item-content .nu-item-content-head img{
-
-}
 
 .numberout-list li:hover .nu-list-item-content .nu-item-content-head img {
   border-radius: 95% 70% 100% 80%;
@@ -898,11 +896,23 @@ body{
   border-radius: 53% 70% 85% 68%;
   transform: rotate(-2deg);
 }
+.numberout-list-item:hover{
+	height: 420px;
+	transition: all .4s;
+}
 
 .nu-list-item-content .nu-item-content-head{
 	margin-top:-65px;
 }
 
+.nu-item-content-body{
+	height:230px;
+	overflow: hidden;
+}
+.numberout-list-item:hover .nu-item-content-body{
+	height:330px;
+	transition: all .4s;
+}
 .numberout-header .icon{
 	font-size:35px;
 	color:#fff;
@@ -910,6 +920,7 @@ body{
 
 .numberout-list li:hover h2, .numberout-list li:hover p{
 	color:#fff;
+	-webkit-line-clamp: 12;
 }
 
 .nu-item-content-body h2{
@@ -931,6 +942,10 @@ body{
     padding: 0 30px;
     color:#777F84;
     margin-bottom: 10px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	overflow: hidden;
 }
 
 #project-container{
