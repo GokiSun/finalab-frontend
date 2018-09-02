@@ -78,7 +78,7 @@ $(function() {
     $('.btnstart').on("click",function(){
         $('.video-container').show();
         $('.video-container').html('<video class="video-content" width="1000" height="580" controls>\n' +
-            '<source src="http://47.106.101.133/finalab-data/video/final.mp4" type="video/mp4">\n' +
+            '<source src="http://www.finalab.cn:12306/finalab-data/video/final.mp4" type="video/mp4">\n' +
             '您的浏览器不支持 video 标签。\n' +
             '</video>\n' +
             '<span class="video-close">X</span>');
