@@ -1,26 +1,30 @@
-var projects = [];
+
 var modelhead = document.getElementById('myModalLabel');
 var modelbody = document.getElementById('modelbody');
 var carouselinner = document.getElementById('carousel-inner');
-function Detail(name) {
-    for (let i = 0;i < projects.length; i++){
-        if(name === projects[i].name){
-            modelhead.innerText = "项目名称："+projects[i].name;
+function Detail(id) {
+    $.ajax({
+        url:"http://www.finalab.cn:12580/sys/project/detail?id="+id,
+        type: "POST",
+        dataType: "JSON",
+        success: function (res) {
+            var project = res.data;
+            modelhead.innerText = "项目名称："+project.name;
             var imglist = '';
-            for (let j = 0;j < projects[i].imageList.length; j++) {
+            for (let j = 0;j < project.imageList.length; j++) {
                 imglist += '<div class="item';
                 if(j == 0){
                     imglist += ' active';
                 }
-                imglist += '">\n<img src="'+projects[i].imageList[j]+'">\n';
+                imglist += '">\n<img src="'+project.imageList[j]+'">\n';
 
                 imglist += '</div>';
             }
             carouselinner.innerHTML = imglist;
             var mumberlist = '';
-            for (let k = 0;k < projects[i].memberList.length; k++) {
-                mumberlist += projects[i].memberList[k];
-                if(k !== projects[i].memberList.length-1) mumberlist += "、";
+            for (let k = 0;k < project.memberList.length; k++) {
+                mumberlist += project.memberList[k];
+                if(k !== project.memberList.length-1) mumberlist += "、";
             }
             modelbody.innerHTML =
                 "<table class='table'>" +
@@ -30,16 +34,15 @@ function Detail(name) {
                 "</tr>" +
                 "<tr>" +
                 "<td>项目类别：</td>" +
-                "<td>"+ projects[i].category +"</td>" +
+                "<td>"+ project.category +"</td>" +
                 "</tr>" +
                 "<tr>" +
                 "<td>项目简介：</td>" +
-                "<td>"+ projects[i].introduction +"</td>" +
+                "<td>"+ project.introduction +"</td>" +
                 "</tr>" +
                 "</table>";
-            break;
         }
-    }
+    });
 }
 $(function () {
     $.ajax({
@@ -47,7 +50,7 @@ $(function () {
         type: "POST",
         dataType: "JSON",
     	success: function (res) {
-    		projects = res.data;
+            var projects = res.data;
             if (projects) {
                 $('.project-body-list').html("");
                 for (let i = 0;i < projects.length; i++){
@@ -57,7 +60,7 @@ $(function () {
                         '<li class="project-body-list-item">\n' +
                         '<div class="pro-list-item-img"><label>'+ projects[i].category +'</label><img src="'+ projects[i].coverImage +'" alt="nn"></div>\n' +
                         '<div class="pro-list-item-bot">\n' +
-                        '<p>'+ projects[i].name +'<a> <button class="pro-btn btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="Detail(\''+projects[i].name+'\')">了解更多</button></a></p>\n' +
+                        '<p>'+ projects[i].name +'<a> <button class="pro-btn btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="Detail(\''+projects[i].id+'\')">了解更多</button></a></p>\n' +
                         '</div>\n' +
                         '</li>'
                     )
