@@ -1,6 +1,6 @@
 $(function () {
     $.ajax({
-        url: "http://47.106.101.133:12580/sys/achieve/getAll",
+        url: "http://www.finalab.cn:12580/sys/achieve/getAll",
         type: "POST",
         dataType: "JSON",
         success: function (res) {
