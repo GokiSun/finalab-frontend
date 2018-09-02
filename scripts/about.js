@@ -48,7 +48,7 @@ $(function(){
 
 	//the leaders
     $.ajax({
-        url:"http://47.106.101.133:12580/sys/member/getCouncil",
+        url:"http://www.finalab.cn:12580/sys/member/getCouncil",
         type: "POST",
         dataType: "JSON",
         success: function (res) {
@@ -68,7 +68,7 @@ $(function(){
     })
 	//the win
     $.ajax({
-        url:"http://47.106.101.133:12580/sys/winning/getAll",
+        url:"http://www.finalab.cn:12580/sys/winning/getAll",
         type: "POST",
         dataType: "JSON",
         async: false,

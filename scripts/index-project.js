@@ -43,7 +43,7 @@ function Detail(name) {
 }
 $(function () {
     $.ajax({
-    	url:"http://47.106.101.133:12580/sys/project/getAll",
+    	url:"http://www.finalab.cn:12580/sys/project/getAll",
         type: "POST",
         dataType: "JSON",
     	success: function (res) {

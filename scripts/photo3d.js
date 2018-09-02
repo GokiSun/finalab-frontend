@@ -3,7 +3,7 @@ var imgcon = document.getElementById('carouselContainer');
 var imgconStr = '';
 
 $.ajax({
-    url: "http://47.106.101.133:12580/sys/memory/random",
+    url: "http://www.finalab.cn:12580/sys/memory/random",
     type: "POST",
     dataType: "JSON",
     async:false,
